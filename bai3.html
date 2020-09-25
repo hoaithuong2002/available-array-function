@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    // function isConverted() {
+        let str = 'Thuong';
+        let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+        let result = [];
+
+        for(let i=0; i<str.length; i++)
+        {
+            if(UPPER.indexOf(str[i]) !== -1) {
+                let pos=UPPER.indexOf(str[i]);
+                // console.log(LOWER[i]);
+                result.push(LOWER[pos]);
+            }
+            else if(LOWER.indexOf(str[i]) !== -1) {
+                let pos=LOWER.indexOf(str[i])
+                result.push(UPPER[pos]);
+            }
+            else {
+                result.push(str[i]);
+            }
+        }
+        // console.log(result.join(''));
+        result=result.join("");
+        document.write(result);
+</script>
+</body>
+</html>
